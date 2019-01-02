@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" font-size="100px">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="./mui/css/mui.css">
+    <link rel="stylesheet" href="./mui/css/iconfont.css">
+    <link rel="stylesheet" href="./mui/css/showloading.css" />
+    <link rel="stylesheet" href="./mui/css/mui.picker.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <!-- <script src="./mui/js/mui.js"></script>
+    <script src="./mui/js/iconfont.js"></script>
+    <script src="./mui/js/mui.picker.min.js"></script>
+    <script src="./mui/js/showloading.js"></script> -->
+    <script src="./require.js" data-main="./index.js" defer async="true"></script>
+</head>
+
+<body>
+
+    <div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable">
+        <!--侧滑菜单部分-->
+        <aside id="offCanvasSide" class="mui-off-canvas-left">
+            <div id="pullrefresh" class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <div class="mui-content">
+                        <ul class="mui-table-view result-list"></ul>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!--主界面部分-->
+        <div class="mui-inner-wrap">
+
+            <div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
+                <div class="mui-scroll">
+
+                    <ul class="mui-table-view">
+                        <div class="mui-card">
+
+                            <li class="mui-table-view-cell mui-collapse">
+
+                                <a class="mui-navigate-right" href="#">
+                                    <div class="mui-card-header mui-card-media">
+                                        <img src="./img/img1.jpg" />
+                                        <div class="mui-media-body">
+                                            <input id="nick_name" readonly value="事件类型"></input>
+                                            <!-- <input type="text" id="nick_name" placeholder="请选择" readonly formdata=""></input> -->
+                                            <p>创建于 <span id="creat_date"></span></p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="mui-collapse-content">
+                                    <div class="mui-card-content">
+                                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                                    </div>
+                                    <!--页脚，放置补充信息或支持的操作-->
+                                    <div class="mui-card-footer">
+                                        <input type="text" id="remindTime" placeholder="提醒时间" maxlength="30"
+                                            data-options='{"type":"time"}'>
+                                    </div>
+
+                                    <nav class="mui-bar mui-bar-tab add-device-button" id="saveBotton">
+                                        <div class="mui-tab-item">
+                                            <span class="mui-tab-label save_button">保存</span>
+                                        </div>
+                                    </nav>
+                                </div>
+
+                            </li>
+                            <li class="mui-table-view-cell mui-collapse">
+
+                                <a class="mui-navigate-right" href="#">
+                                    <div class="mui-card-header mui-card-media">
+                                        <img src="./img/img1.jpg" />
+                                        <div class="mui-media-body">
+                                            <input id="nick_name" readonly value="事件类型"></input>
+                                            <!-- <input type="text" id="nick_name" placeholder="请选择" readonly formdata=""></input> -->
+                                            <p>创建于 <span id="creat_date"></span></p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="mui-collapse-content">
+                                    <div class="mui-card-content">
+                                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                                    </div>
+                                    <!--页脚，放置补充信息或支持的操作-->
+                                    <div class="mui-card-footer">
+                                        <input type="text" id="remindTime" placeholder="提醒时间" maxlength="30"
+                                            data-options='{"type":"time"}'>
+                                    </div>
+
+                                    <nav class="mui-bar mui-bar-tab add-device-button" id="saveBotton">
+                                        <div class="mui-tab-item">
+                                            <span class="mui-tab-label save_button">保存</span>
+                                        </div>
+                                    </nav>
+                                </div>
+
+                            </li>
+                            <li class="mui-table-view-cell mui-collapse">
+
+                                <a class="mui-navigate-right" href="#">
+                                    <div class="mui-card-header mui-card-media">
+                                        <img src="./img/img1.jpg" />
+                                        <div class="mui-media-body">
+                                            <input id="nick_name" readonly value="事件类型"></input>
+                                            <!-- <input type="text" id="nick_name" placeholder="请选择" readonly formdata=""></input> -->
+                                            <p>创建于 <span id="creat_date"></span></p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="mui-collapse-content">
+                                    <div class="mui-card-content">
+                                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                                    </div>
+                                    <!--页脚，放置补充信息或支持的操作-->
+                                    <div class="mui-card-footer">
+                                        <input type="text" id="remindTime" placeholder="提醒时间" maxlength="30"
+                                            data-options='{"type":"time"}'>
+                                    </div>
+
+                                    <nav class="mui-bar mui-bar-tab add-device-button" id="saveBotton">
+                                        <div class="mui-tab-item">
+                                            <span class="mui-tab-label save_button">保存</span>
+                                        </div>
+                                    </nav>
+                                </div>
+
+                            </li>
+                            <li class="mui-table-view-cell mui-collapse">
+
+                                <a class="mui-navigate-right" href="#">
+                                    <div class="mui-card-header mui-card-media">
+                                        <img src="./img/img1.jpg" />
+                                        <div class="mui-media-body">
+                                            <input id="nick_name" readonly value="事件类型"></input>
+                                            <!-- <input type="text" id="nick_name" placeholder="请选择" readonly formdata=""></input> -->
+                                            <p>创建于 <span id="creat_date"></span></p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="mui-collapse-content">
+                                    <div class="mui-card-content">
+                                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                                    </div>
+                                    <!--页脚，放置补充信息或支持的操作-->
+                                    <div class="mui-card-footer">
+                                        <input type="text" id="remindTime" placeholder="提醒时间" maxlength="30"
+                                            data-options='{"type":"time"}'>
+                                    </div>
+
+                                    <nav class="mui-bar mui-bar-tab add-device-button" id="saveBotton">
+                                        <div class="mui-tab-item">
+                                            <span class="mui-tab-label save_button">保存</span>
+                                        </div>
+                                    </nav>
+                                </div>
+
+                            </li>
+                            <li class="mui-table-view-cell mui-collapse">
+
+                                <a class="mui-navigate-right" href="#">
+                                    <div class="mui-card-header mui-card-media">
+                                        <img src="./img/img1.jpg" />
+                                        <div class="mui-media-body">
+                                            <input id="nick_name" readonly value="事件类型"></input>
+                                            <!-- <input type="text" id="nick_name" placeholder="请选择" readonly formdata=""></input> -->
+                                            <p>创建于 <span id="creat_date"></span></p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="mui-collapse-content">
+                                    <div class="mui-card-content">
+                                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                                    </div>
+                                    <!--页脚，放置补充信息或支持的操作-->
+                                    <div class="mui-card-footer">
+                                        <input type="text" id="remindTime" placeholder="提醒时间" maxlength="30"
+                                            data-options='{"type":"time"}'>
+                                    </div>
+
+                                    <nav class="mui-bar mui-bar-tab add-device-button" id="saveBotton">
+                                        <div class="mui-tab-item">
+                                            <span class="mui-tab-label save_button">保存</span>
+                                        </div>
+                                    </nav>
+                                </div>
+
+                            </li>
+                        </div>
+
+                    </ul>
+                </div>
+                <nav class="mui-bar mui-bar-tab add-device-button" id="saveBotton">
+                    <div class="mui-tab-item">
+                        <span class="mui-tab-label save_button">新建</span>
+                    </div>
+                </nav>
+                <div class="background-screen"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>
