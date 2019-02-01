@@ -2,54 +2,63 @@
 	touch-action: none;
 }
 
-.mui-card-footer #remindTime{
+.mui-card-footer #remindTime {
 	width: 33%;
-    height: 27px;
-    font-size: 15px;
-    text-align: center;
-    float: right;
+	height: 27px;
+	font-size: 15px;
+	text-align: center;
+	float: right;
 	margin-bottom: 0;
 	/* position: relative;
 	right: -204px;
 	top: -45px; */
 	position: absolute;
-    top: 0;
-    right: 0;
-    background: lightblue;
+	top: 0;
+	right: 0;
+	background: lightblue;
 }
-.mui-card-header:after, .mui-card-footer:before{
+
+.mui-card-header:after,
+.mui-card-footer:before {
 	height: 0;
 }
-textarea{
+
+textarea {
 	margin-bottom: 0;
 	text-indent: 1em;
 }
-.mui-table-view{
+
+.mui-table-view {
 	width: 97%;
-    margin: 0 auto;
-    border-radius: 8px;
-}
-.mui-card{
-	box-shadow: none;
-}
-.mui-table-view-cell > a:not(.mui-btn){
-	margin: -18px -29px;
-}
-input{
-	font-size: 13px;
-    outline: none !important;
-    border: none !important;
-    width: auto !important;
-}
-/* 选中该记录 */
-.mui-table-view-cell.mui-active{
-	background-color:#ddd;
-}
-.mui-table-view-cell.mui-active input{
-	background-color:#ddd;
+	margin: 0 auto;
+	border-radius: 8px;
 }
 
-.mui-card-footer{
+.mui-card {
+	box-shadow: none;
+}
+
+.mui-table-view-cell>a:not(.mui-btn) {
+	margin: -18px -29px;
+}
+
+input {
+	font-size: 13px;
+	outline: none !important;
+	border: none !important;
+	width: auto !important;
+}
+
+/* 选中该记录 */
+.mui-table-view-cell.mui-active {
+	background-color: #ddd;
+}
+
+.mui-table-view-cell.mui-active input {
+	background-color: #ddd;
+}
+
+.mui-card-footer {
 	margin: 14px 0px 44px 14px;
 }
 
@@ -57,112 +66,124 @@ input{
 
 
 .background-screen {
-	width:100%;
-	height:180px;
+	width: 100%;
+	height: 180px;
 	background-color: #4A77B0;
-	z-index:-1;
-	position:fixed;
-	top:0px;
+	z-index: -1;
+	position: fixed;
+	top: 0px;
 }
-.mui-bar-tab {
-    background-color: #4A77B0;
-}
+
+
+
 .mui-bar-tab .mui-tab-item {
-	color:#fff;
+	color: #fff;
 }
+
 .mui-input-group .mui-input-row {
 	display: flex;
-	justify-content: space-between;
+	/* justify-content: space-between; */
 }
+
 .mui-input-group .mui-input-row {
 	font-size: 16px;
-	height:48px;
+	height: 48px;
 }
+
 .mui-input-group .mui-input-row input {
-	text-align: right;
+	/* text-align: right; */
 	height: 48px;
 	line-height: 48px;
 }
+
 .mui-input-row label {
-	width: 59%;
-	padding: 0 0 0 15px;
-    height: 48px;
-    line-height: 48px;
+	width: 11%;
+	padding: 0 0 0 22px;
+	height: 48px;
+	line-height: 48px;
 }
+
 i {
 	font-style: normal;
 	color: red;
 }
+
 .mui-bar-tab .mui-tab-label {
 	color: #fff;
 }
+
 .mui-icon-search:before {
-    content: '\e466';
-    position: relative;
-    top: 13px;
-    right: 8px;
+	content: '\e466';
+	position: relative;
+	top: 13px;
+	right: 8px;
 	color: blue;
 }
+
 .mui-off-canvas-left .mui-table-view {
 	background-color: #333;
 	color: #fff;
 }
-.mui-off-canvas-left .mui-table-view:after,.mui-table-view:before {
-	height:0;
+
+.mui-off-canvas-left .mui-table-view:after,
+.mui-table-view:before {
+	height: 0;
 }
+
 .mui-row .mui-input-row {
-	height:auto;
+	height: auto;
 	display: flex;
-	align-items:center;
+	align-items: center;
 }
+
 .mui-row .mui-input-row label {
 	width: 30%;
 }
+
 .mui-row .mui-input-row textarea {
 	width: 70%;
-	border:1px solid #c8c7cc;
+	border: 1px solid #c8c7cc;
 	margin: 17px 13px 0px 0px;
 	padding-left: 15px;
 }
+
 .mui-card {
 	/* padding-bottom: 20px; */
 	margin-bottom: 20px;
 }
-/*
-.mui-navigate-right:after, .mui-push-right:after{
-	right: 10px;
+
+/* new */
+#pop_window{
+	/* display: none; */
+	width: 96%;
+	margin: 0 auto;
+	position: fixed;
+    top: 50%;
+	margin-left: 2%;
+	z-index: 10;
 }
 
-
-
-.mui-input-row.remark{
-	height: 90px;
-    margin-top: 14px;
+.text-input{
+	min-height: 100px;
 }
-.mui-input-row.remark label{
-	width: 28%;
+.text-input textarea{
+	text-indent: .4em;
+    font-size: 16px;
 }
-.mui-input-row.remark_port label{
-	width: 30%;
+.text-input .button, .mui-btn{
+	margin-right: 40px;	
 }
-.mui-input-row.remark_record label{
-	width: 30%;
+.mui-bar-tab {
+	/* border-radius: 50%; */
+    background-color: #4A77B0;
+    /* width: 50px; */
 }
-.mui-input-row.remark_install label{
-	width: 17%;
+.mask{
+	display: none;
+	width: 100%;
+	height: 178%;
+	background: rgba(0, 0, 0, .3);
+	position: fixed;
+	top: 0;
+	z-index: 9;
 }
-.mui-input-row.remark label~textarea {
-    font-size: 14px;
-    float: left;
-    width: 79%;
-    border: 1px solid #e4e4e4;
-    border-radius: 4px;
-    height: 77px;
-	text-indent: 1em;
-	margin-right: 15px;
-}
-.mui-input-group .mui-input-row.remark:after {
-	background-color: transparent;
-}
-
- */

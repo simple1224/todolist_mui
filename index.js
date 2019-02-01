@@ -19,6 +19,82 @@ require.config({
 	}
 });
 require(['mui', 'jquery', 'showloading', 'mui.picker.min'], function (mui, $) {
+	//点击新建
+	mui(".mui-inner-wrap").on('tap', '.new_button', function () {
+		// $('#pop_window').show();
+		$('.mask').show()
+	})
+
+	// 点击确认保存
+	mui(".mui-input-group").on('tap', '#confirm', function () {
+		console.log("确认")
+		var title = mui('#title')[0].value.replace(/(^\s*)|(\s*$)/g, "");
+		var content = mui('#content')[0].value.replace(/(^\s*)|(\s*$)/g, "");
+		console.log('title', title)
+		console.log('content', content)
+		mui.ajax({
+			type: "post",
+			url: "http://132.232.2.53/todos",
+			data: {
+				'content': content,
+				'title': title
+			},
+			dataType: "json",
+			headers: {
+				'Content-Type': 'application/json;charset=UTF-8'
+			},
+			success: function (response) {
+				console.log(response)
+				if (data.code == "0") {
+					resolve(data.data);
+					return `
+						<li class="mui-table-view-cell mui-collapse">
+							<a class="mui-navigate-right" href="#">
+								<div class="mui-card-header mui-card-media">
+									<img src="./img/img1.jpg" />
+									<div class="mui-media-body">
+										<input id="nick_name" readonly value="标题"></input>
+										<p>创建于 <span id="creat_date"></span></p>
+									</div>
+								</div>
+							</a>
+							<div class="mui-collapse-content">
+								<div class="mui-card-content">
+									<textarea name="" id="" cols="30" rows="10"></textarea>
+								</div>
+							</div>
+						</li>	
+					`
+				} else {
+					reject(data.msg)
+				}
+			}
+		});
+	})
+
+	// 点击取消
+	mui(".mui-input-group").on('tap', '#cancel', function () {
+		$('.mask').hide();
+	})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	// 设置提醒时间
 	$("#remindTime")[0].addEventListener('tap', function () {
 		var this1 = this; //把这个点击记住
@@ -57,9 +133,9 @@ require(['mui', 'jquery', 'showloading', 'mui.picker.min'], function (mui, $) {
 		mui('#offCanvasSideScroll').scroll();
 		mui('#offCanvasContentScroll').scroll();
 		//获取页面传递的参数并请求数据
-		pageParam = $http.getParam(window.location.href);
+		// pageParam = $http.getParam(window.location.href);
 		//值列表
-		$list = $(".result-list");
+		// $list = $(".result-list");
 	}
 
 	init();
